@@ -1,0 +1,9 @@
+-IC:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include
+-IC:/Program Files (x86)/glew/include
+-DGM_GL_DEBUG
+-DGM_STREAM
+-DGLEW_STATIC
+-DWIN32
+-o
+C:/Users/Admin/Desktop/AppGeoMod/build/gmlibqmldemo/hidmanager/moc_hidmanagertreemodel.cpp
+C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/hidmanager/hidmanagertreemodel.h

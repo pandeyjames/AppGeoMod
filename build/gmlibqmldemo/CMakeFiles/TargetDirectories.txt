@@ -1,0 +1,3 @@
+C:/Users/Admin/Desktop/AppGeoMod/build/gmlibqmldemo/CMakeFiles/rebuild_cache.dir
+C:/Users/Admin/Desktop/AppGeoMod/build/gmlibqmldemo/CMakeFiles/GMlibQmlDemo.dir
+C:/Users/Admin/Desktop/AppGeoMod/build/gmlibqmldemo/CMakeFiles/edit_cache.dir

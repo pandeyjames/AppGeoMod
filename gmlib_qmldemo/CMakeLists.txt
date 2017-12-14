@@ -118,7 +118,6 @@ set( HDRS
   GERBS.h
   simplesubsurf.h
   GERBSurface.h
-  #exprtk.h
   )
 
 set( SRCS

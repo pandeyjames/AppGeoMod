@@ -22,6 +22,7 @@
 
 #include <QDebug>
 #include "../gmlib/modules/scene/src/visualizers/gmselectorgridvisualizer.h"
+#include "simplesubsurf.h"
 
 
 
@@ -35,31 +36,53 @@
 template <typename T>
 inline
 GERBSURFACE<T>::GERBSURFACE( GMlib::PSurf<T, 3>*  s, int n1, int n2) {
-    _closed=s->isClosed();
-    int n1=_closed? n+1 : n;
-    generateKnotVector(n1,s->getParStart(),s->getParEnd());
-    _n = n1;
-    _ls.setDim(n1);
-    for (int i=0;i<n;i++){
-        auto s = new PSubSurf<T>(s, _t[i],_t[i+2],_t[i+1]);
+//    _closed_u=s->isClosedU();
+//    n1=_closed_u? n1+1 : n1;
+//    _closed_v=s->isClosedV();
+//    n2=_closed_v? n2+1 : n2;
+    if (s->isClosedU()){
+        _closed_u = true;
+        n1++;
+    }
+    if (s->isClosedV()){
+        _closed_v = true;
+        n2++;
+    }
+    if (_closed_u) n1--;
+    if (_closed_v) n2--;
+    std::cout<<"u="<<_closed_u<<"  v="<<_closed_v<<std::endl;
+    generateKnotVector(_u,n1,s->getParStartU(),s->getParEndU(),_closed_u);
+    generateKnotVector(_v,n2,s->getParStartV(),s->getParEndV(),_closed_v);
 
-        s->toggleDefaultVisualizer();
-        s->replot(50,0);
-        s->setCollapsed(true);
-        _ls[i]=s;
-        this->insert(s);
-
+        _ls.setDim(n1,n2);
+    //std::cout<<"j1="<<j1<<"  i1="<<i1<<std::endl;
+    for (int i=0;i<n1;i++){
+        for (int j=0;j<n2;j++){
+            auto sk = new PSimpleSubSurf<T>(s, _u[i],_u[i+2],_u[i+1],_v[j],_v[j+2],_v[j+1]);
+            sk->toggleDefaultVisualizer();
+            sk->replot(10,10,1,1);
+            sk->setCollapsed(true);
+            _ls[i][j]=sk;
+            this->insert(sk);
+        }
     }
 
-    if(_closed){
-        _ls[n]=_ls[0];
+    if(_closed_u){
+        for (int i=0;i<n1;i++)
+        _ls[i][n2-1]=_ls[i][0];
     }
+
+    if(_closed_v){
+        for (int j=0;j<n2;j++)
+        _ls[n1-1][j]=_ls[0][j];
+    }
+
 
 }
 
 template <typename T>
 inline
-GERBSURFACE<T>::GERBSURFACE( const GERBSURFACE<T>& copy ) : GMlib::PCurve<T,3>(copy) {}
+GERBSURFACE<T>::GERBSURFACE( const GERBSURFACE<T>& copy ) : GMlib::PSurf<T,3>(copy) {}
 
 
 template <typename T>
@@ -78,8 +101,12 @@ GERBSURFACE<T>::~GERBSURFACE() {}
 //***************************************************
 
 template <typename T>
-bool GERBSURFACE<T>::isClosed() const {
-    return true;
+bool GERBSURFACE<T>::isClosedU() const {
+    return _closed_u;
+}
+template <typename T>
+bool GERBSURFACE<T>::isClosedV() const {
+    return _closed_v;
 }
 
 
@@ -88,18 +115,54 @@ bool GERBSURFACE<T>::isClosed() const {
 //******************************************************
 
 template <typename T>
-void GERBSURFACE<T>::eval( T t, int d, bool /*l*/ ) const {
-    this->_p.setDim( d + 1 );
-    //int k = (_t.getDim()+1)/3;
-    int i = findIndex(t);
-    T B = Bfunc((t-_t(i))/(_t(i+1)-_t(i)));
-    this->_p=(1-B)*(_lc(i-1)->evaluateParent(t,d))+B*(_lc(i)->evaluateParent(t,d));
+void GERBSURFACE<T>::eval( T tu, T tv, int d1, int d2, bool /*l*/ , bool /*k*/) const {
+    this->_p.setDim( d1 + 1, d2 +1 );
+    int i = findIndex(tu,_u);
+    int j = findIndex(tv,_v);
+    GMlib::DMatrix<T> Bu(2,2);
+    GMlib::DMatrix<T> Bv(2,2);
+    //     T Bu = Bfunc((_u-_u(i))/(_u(i+1)-_u(i)));
+    //     T BuD = BfuncD((_u-_u(i))/(_u(i+1)-_u(i)));
+    //     T Bv = Bfunc((_v-_v(j))/(_v(j+1)-_v(j)));
+    //     T BvD = Bfuncd((_v-_v(i))/(_v(i+1)-_v(i)));
+    Bu[0][1]=Bfunc(_W(i,d1,tu,_u));
+    Bu[0][0]=1-Bu[0][1];
+    Bu[1][1]=BfuncD(_W(i,d1,tu,_u));
+    Bu[1][0]=-Bu[1][1];
+    Bv[1][0]=Bfunc(_W(j,d2,tv,_v));
+    Bv[0][0]=1-Bv[1][0];
+    Bv[1][1]=BfuncD(_W(j,d2,tv,_v));
+    Bv[0][1]=-Bv[1][1];
+    //GMlib::DMatrix< GMlib::Vector<T,3> > C[2][2];
+    GMlib::DMatrix<GMlib::Vector<T,3>> C11 = _ls(i-1)(j-1)->evaluateParent(tu,tv,d1,d2);
+    GMlib::DMatrix<GMlib::Vector<T,3>> C21 = _ls(i)(j-1)->evaluateParent(tu,tv,d1,d2);
+    GMlib::DMatrix<GMlib::Vector<T,3>> C12 = _ls(i-1)(j)->evaluateParent(tu,tv,d1,d2);
+
+    GMlib::DMatrix<GMlib::Vector<T,3>> C22 = _ls(i)(j)->evaluateParent(tu,tv,d1,d2);
+       auto M1 = Bu[0][0]*C11[0][0] + Bu[0][1]*C21[0][0];
+       auto M2 = Bu[0][0]*C12[0][0] + Bu[0][1]*C22[0][0];
+       //std::cout<<"h1 = "<<h1<< " h2 "<<h2<<std::endl; //h3 "<<C3<< " C4 ="<<C4<<std::endl;
+
+       auto M3 = Bu[1][0]*C11[0][0] + Bu[1][1]*C21[0][0];
+       auto M4 = Bu[1][0]*C12[0][0] + Bu[1][1]*C22[0][0];
+
+       auto M5 = Bu[0][0]*C11[1][0] + Bu[0][1]*C21[1][0];
+       auto M6 = Bu[0][0]*C12[1][0] + Bu[0][1]*C22[1][0];
+
+       auto M7 = Bu[0][0]*C11[0][1] + Bu[0][1]*C21[0][1];
+       auto M8 = Bu[0][0]*C12[0][1] + Bu[0][1]*C22[0][1];
+
+       this->_p[0][0] = M1*Bv[0][0] + M2*Bv[1][0];
+
+       this->_p[0][1] = M3*Bv[0][0] + M4*Bv[1][0] + M5*Bv[0][0] + M6*Bv[1][0];
+
+       this->_p[1][0] = M1*Bv[0][1] + M2*Bv[1][1] + M7*Bv[0][0] + M8*Bv[1][0];
 
 }
 
 template <typename T>
 inline
-void GERBSURFACE<T>::generateKnotVector(int n, T s, T e) {
+void GERBSURFACE<T>::generateKnotVector(GMlib::DVector<T> &_t,int n, T s, T e, bool closed) {
 
     int order = 2;
 
@@ -119,39 +182,43 @@ void GERBSURFACE<T>::generateKnotVector(int n, T s, T e) {
 
     for( ; i < _t.getDim(); i++ ){
         _t[i] = e;
+    }
 
+    if(closed){
+        _t[0]=_t[1]-(_t[n]-_t[n-1]);
+        _t[n+1]= _t[n]+(_t[2]-_t[1]);
     }
     qDebug()<<" "<<_t<<" ";
 }
 
 template <typename T>
-T GERBSURFACE<T>::getStartPu() const {
+T GERBSURFACE<T>::getStartPU() const {
     //return T(tmin);
-    return _t(1);
+    return _u(1);
 }
 
 
 
 
 template <typename T>
-T GERBSURFACE<T>::getEndPu()const {
+T GERBSURFACE<T>::getEndPU()const {
     //return T(tmax);
-    return _t( _t.getDim()-2 );
+    return _u( _u.getDim()-2 );
 }
 
 template <typename T>
-T GERBSURFACE<T>::getStartPv() const {
+T GERBSURFACE<T>::getStartPV() const {
     //return T(tmin);
-    return _t(1);
+    return _v(1);
 }
 
 
 
 
 template <typename T>
-T GERBSURFACE<T>::getEndPv()const {
+T GERBSURFACE<T>::getEndPV()const {
     //return T(tmax);
-    return _t( _t.getDim()-2 );
+    return _v( _v.getDim()-2 );
 }
 
 
@@ -159,34 +226,77 @@ T GERBSURFACE<T>::getEndPv()const {
 
 template <typename T>
 inline
-int GERBSURFACE<T>::findIndex(T t) const {
-    int i=2;
+int GERBSURFACE<T>::findIndex(T t,const GMlib::DVector<T> &_knot ) const {
+    int i=1;
 
-    for (;i<_n; i++){
+    for (;i<_knot.getDim()-2; i++){
         //if (t>=_t[i]&&t<t[i+1]) because in cost function _t[i]=_t(i) for vectors
-        if (t>=_t(i) && t<_t(i+1)) break;
+        if (t>=_knot(i) && t<_knot(i+1)) break;
     }
-    if (i>=_n)
-        i=_n-1;
+    if (i>_knot.getDim()-3)
+        i=_knot.getDim()-3;
     return i;
 }
+
 template <typename T>
 inline
-T GERBSURFACE<T>::_W(int i, int d, T t)const {
+T GERBSURFACE<T>::_W(int i, int d, T t,const GMlib::DVector<T> &_k )const {
 
-    return (t-_t(i))/(_t(i+d)-_t(i));
+    return (t-_k(i))/(_k(i+d)-_k(i));
 }
 template <typename T>
 inline
 T GERBSURFACE<T>::Bfunc(T t) const{
     return (3*t*t-2*t*t*t);
 }
+template <typename T>
+inline
+T GERBSURFACE<T>::BfuncD(T t) const{
+    return -6*(t-1)*t;
+}
 
-//template <typename T>
-//void GERBSURFACE<T>::localSimulate(double dt)
-//{
-//    for (int i=0;i<_n;i++){
-//    _lc[i]->rotate(1, GMlib::Vector<float, 3> (1,0,0));
-//    }
-//}
+template <typename T>
+void GERBSURFACE<T>::localSimulate(double dt)
+{
+    float a=_n1, b=+_n2+dt;
+    double random = (double)std::rand() / (double) RAND_MAX;
+    double diffrence = b-a;
+    double r = random*diffrence;
+    std::cout<<"random value-> "<<a+r<<std::endl;
+    //val= (a+r)*0.1;
+//    this->updateHeight(std::sin(_dt));
+//    _force +=dt;
+    for (int i=0;i<_n1;i++){
+        for(int j=0; j<_n2;j++){
+            //_ls[i][j]->translate(GMlib::Vector<float, 3>(dt,0,0));
+    _ls[i][j]->rotate(std::sin(dt),GMlib::Vector<float, 3>(1,0,0));
+        }
+    }
+    //randomizeHeight(val);
+
+}
 //} // END namespace GMlib
+template <typename T>
+void GERBSURFACE<T>::randomizeHeight(float n)
+{
+    for (int i=0;i<_n1;i++){
+        for(int j=0; j<_n2;j++){
+            //_ls[i][j]->translate(GMlib::Vector<float, 3>(dt,0,0));
+    _ls[i][j]->translate(GMlib::Vector<float, 3>(n,0,0));
+    _ls[i][j]->translate(GMlib::Vector<float, 3>(0,n,0));
+        }
+    }
+}
+template <typename T>
+float GERBSURFACE<T>::generateRandomValue(float a, float b)
+{
+//    //std::srand(time(NULL));
+//    double random = (double)std::rand() / (double) RAND_MAX;
+//    double diffrence = b-a;
+//    double r = random*diffrence;
+//    std::cout<<"random value-> "<<a+r<<std::endl;
+//    return (a+r)*0.5;
+    return 0;
+
+}
+

@@ -1,0 +1,233 @@
+% What kind of text document should we build
+\documentclass[a4,10pt]{article}
+
+
+% Include packages we need for different features (the less, the better)
+
+% Clever cross-referencing
+\usepackage{cleveref}
+
+% Math
+\usepackage{amsmath}
+
+% Algorithms
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{comment}
+
+% Tikz
+\RequirePackage{tikz}
+\usetikzlibrary{arrows,shapes,calc,through,intersections,decorations.markings,positioning}
+
+\tikzstyle{every picture}+=[remember picture]
+
+\RequirePackage{pgfplots}
+
+
+
+
+
+
+
+
+
+% Set TITLE, AUTHOR and DATE
+\title{A Project Report on Geometrical Applicaion}
+\author{James Pandey}
+\date{\today}
+ 
+
+
+\begin{document}
+
+
+
+  % Create the main title section
+  \maketitle
+
+  \begin{abstract}
+    This document is a Project Report on the assigned task for STE6274- Computer Game Design.
+
+    This report contains the details of how the project is finalized with added features to the given demo application
+    are integrated and demonstrated, including some basic algorithms and methods.
+
+    The C++ programming language is used to build the application which was provided as a initial setup from Masters of Computer Science study at UiT, Campus Narvik.
+    The application depends on GMlib: Geometric Modelling Library v 0.6.0, and the Qt development suite.
+    The basic features was provided readymade, with the initial setup and is tasked to implement and build an application which can be used as a template for new applications
+    throughout the MSC computer science study at UiT - Campus Narvik with added functionalities and new features.
+  \end{abstract}
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%  The main content of the report  %%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+
+  \section{Introduction}
+    The theoritical background of programming in C++ ~\cite{wesley:1} is achived during earlier studies.
+    Here it is a practical bases of the theories which were studied in the past now has a direct implementation using guide and nomenclature of Qt platform~\cite{guide:2}
+    The C++ programming language comes with a standard library, the \emph{Standard Template Library} (STL), which consists of containers, methods, algorithms and more.
+    In this report we compare custom implementations of a Shell's sorting algorithm~\cite{shell:3} with equivalent components from the STL.
+
+    Qt (usually pronounced as "cute",) is used mainly for developing application software with graphical user interfaces (GUIs);
+    however, programs without a GUI can be developed, such as command-line tools and consoles for servers.
+    Qt is a cross-platform application framework that is widely used
+    for developing application software that can be run on various software and hardware platforms with little
+    or no change in the underlying codebase, while still being a native application with the capabilities and speed thereof.
+  
+    The demonstration of the output of the program can be seen below (see \cref{fig:first_demo}).
+    \begin{figure}[tbp]
+      \centering
+      \includegraphics[width=1\textwidth]{gfx/first_demo.png}
+      \caption{Demonstration of the Application selection of the object}
+      \label{fig:first_demo}
+    \end{figure}
+
+  \section{Methods}
+    Methods as a way to describe the project includes some various functionalities. At the very first default key bind and a simulating Torus object is provided by default in the Application.
+    To develop the applicatin further it is mandatory minimal requirement to bind the keys and mouse events to the default functions for this Qt handles events as signal and slots. The main idea
+    behind this is to connect the events of keyboard and mouse to the application as QEvent and then the identified events can be used to perform different funtions.
+    The mouse and keyboard events such as key presses and button clicked and wheel events are distinguished and then aditionally they are used further to call various methods built in the scenario class
+    as per requirement. Here some functions like selection, deselection, camera movement, object rotation, scale, move, insert and delete can be performed. The main theme of task is to provide
+    manipulation of the objects like a geometrical object such as Torus, sphere, cone, beizier, cylynder, editor, performing the different operations upon.
+
+   \begin{itemize}
+      \item Add a short description of the O-notation (with a reference to Knuth's paper from 1976)\footnote{Hint: ``Big Omicron and Big Omega and Big Theta''.}.
+      \item Recall that the O-notation enables us to describe an algorithm's response to variation of the size of the input data.
+    \item Mathematics can either be placed in the text, such as $f(x)=\frac{1}{x}$, or as equations:
+    \end{itemize}
+    \begin{equation}
+      \label{eq:integral}
+      f(x) = \int_{-\infty}^{\infty}\frac{sin(x)}{x}dx.
+    \end{equation}
+    \begin{itemize}
+      \item Equations can be referred to. The RHS of formula \eqref{eq:integral} is a well-known indefinite integral. A plot of $\frac{sin(x)}{x}$ is provided in \cref{fig:plot_function}.
+    \end{itemize}
+
+    \begin{figure}[tbp]
+      \begin{tikzpicture}
+        \begin{axis}[
+          xmajorgrids=false,ymajorgrids=false,
+          legend pos=north east,
+          width=0.9\textwidth, height=0.25\textheight,
+%          reverse legend
+          ]
+
+          \addplot[blue,domain=-25.1:25.1,samples=500] {sin(deg(x))/x};
+          \legend{
+            $\frac{sin(x)}{x}$
+          }
+        \end{axis}
+      \end{tikzpicture} 
+      \caption{A plot of the function $\frac{sin(x)}{x},$ for $x \in [-25.1,25.1]$.}
+      \label{fig:plot_function}
+    \end{figure} 
+    
+  \section{Results}
+  \begin{itemize}
+    \item Describe briefly the bubble sort algorithm (a reference or two to any standard text book on algorithms would be in order).
+    \item Don't forget to mention Bubble sort's performance using the O-notation.
+  \end{itemize}
+
+\begin{comment}
+\section{Program Basic Working Algorithm}
+    In \cite{shell:1959} Shell introduced a high-speed sorting procedure.
+    It has later become known as \emph{Shell sorting}.
+    \begin{itemize}
+      \item Initiation of the program loads the basic event heldlers with with application window.
+      \item Predefines set of Torus starts in simulating state.
+      \item Codes of selection of object.
+
+    \end{itemize}
+    \begin{algorithm}
+      \caption{Euclid's algorithm}\label{euclid}
+      \begin{algorithmic}[1]
+        \Procedure{Euclid}{$a,b$}\Comment{The g.c.d. of a and b}
+        \State $r\gets a\bmod b$
+        \While{$r\not=0$}\Comment{We have the answer if r is 0}
+        \State $a\gets b$
+        \State $b\gets r$
+        \State $r\gets a\bmod b$
+        \EndWhile\label{euclidendwhile}
+        \State \textbf{return} $b$\Comment{The gcd is b}
+        \EndProcedure
+      \end{algorithmic}
+    \end{algorithm}
+\end{comment}
+  \section{Discussion}
+  As of now the project concludes with the implementations of basic functionalities. A headstart with the the application is to first setup the system which rqquire a graphic card supports opengl version above 4, experienced with version 3 so I recommend above v 4.
+If you are a developer and wat to further develop the program you need to prepare your system first with Glew v 2.0 and Gmlib v 0.6.0 and ofcourse have a Qt mingw32 v 5.7 installed.
+For the user of this program only needs to run the supplied released executable file with supported libraries and dll.
+  Some examples of topics for this section:
+    \begin{itemize}
+      \item The application is only developed and tested for windows may not be comatible for other system.
+      \item The version of Glew and the Gmlib prematch is mandatory oherwise the program may crash with failure.
+      \item Qt framework is a very user friendly with the documentation and help provided online and offline.
+      \item For now the prgram only runs under windows system future enhancement may include running under other systems.
+      \item A full featured application which can work with the geometrical objects like the software, Auto Cad, Solid work, is
+      an example of the Geometrical Editor. This project may be enhanced with such features in future.
+    \end{itemize}
+
+  \section{Results}
+    A graphical visualization of bytes allocated vs. allocation time in milliseconds for the vector benchmark is shown in \cref{fig:bench_vector}.
+
+    \begin{figure}[tbp]
+      \begin{tikzpicture}
+        \begin{axis}[
+          xmajorgrids=false,ymajorgrids=false,
+          legend pos=south east,
+          width=0.9\textwidth, height=0.25\textheight,
+%          reverse legend
+          ]
+
+          \addplot[red] table[x=size ,y=time, skip first n=0] {dat/benchmark_vector_stl.dat};
+          \addplot[blue] table[x=size ,y=time, skip first n=0] {dat/benchmark_vector_reserve.dat};
+          \legend{
+            STL,  
+            mylib
+          }
+        \end{axis}
+      \end{tikzpicture} 
+      \caption{Run-times: \emph{milliseconds} to allocate and construct number of objects * sizeof(int) \emph{bytes} of data.}
+      \label{fig:bench_vector}
+    \end{figure} 
+ 
+    \Cref{fig:bench_sort} shows performance graphs for the Bubble- and Shell sorting algorithms, together with STL's \texttt{sort()} for reference, measured in milliseconds for some predefined numbers of items.
+
+    \begin{figure}[tbp]
+      \begin{tikzpicture}
+        \begin{axis}[
+          xmajorgrids=false,ymajorgrids=false,
+          legend pos=north west,
+          width=0.9\textwidth, height=0.25\textheight,
+%          reverse legend
+          ]
+
+          \addplot[green] table[x=size ,y=time, skip first n=0] {dat/benchmark_stl_sort.dat};
+          \addplot[red] table[x=size ,y=time, skip first n=0] {dat/benchmark_mylib_bubble.dat};
+          \addplot[blue] table[x=size ,y=time, skip first n=0] {dat/benchmark_mylib_shell.dat};
+          \legend{
+            STL sort,  
+            bubble,
+            Shell
+          }
+        \end{axis}
+      \end{tikzpicture} 
+      \caption{Run-times: \emph{milliseconds} to sort number of objects.}
+      \label{fig:bench_sort}
+    \end{figure} 
+
+  \section{Concluding remarks}
+  \begin{itemize}
+    \item Reflect over the method and results.
+    \item Topics for future work could be suggested here.
+  \end{itemize}
+  Example: By comparing the performance of the reserve and emplace functionality of the STL version of the vector to our custom vector implementation from \emph{mylib} we conclude that the STL vector is slightly faster at the specified operation.
+
+
+
+  % Include the bibliography
+  \bibliographystyle{plain}
+  \bibliography{bibliography}
+
+\end{document}

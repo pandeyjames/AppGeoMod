@@ -5802,6 +5802,26 @@ C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/parametrics/src/gmpcurve.h
 GERBS.c
 C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/GERBS.c
 
+C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/GERBSURFACE.c
+QDebug
+-
+../gmlib/modules/scene/src/visualizers/gmselectorgridvisualizer.h
+C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/scene/src/visualizers/gmselectorgridvisualizer.h
+simplesubsurf.h
+C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/simplesubsurf.h
+
+C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/GERBSurface.h
+simplesubsurf.h
+C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/simplesubsurf.h
+GERBSURFACE.c
+C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/GERBSURFACE.c
+
+C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/MyGERBSsurface6.c
+../gmlib/modules/scene/src/visualizers/gmselectorgridvisualizer.h
+C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/scene/src/visualizers/gmselectorgridvisualizer.h
+simplesubsurf.h
+C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/simplesubsurf.h
+
 C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/P3DCurve.c
 
 C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/P3DCurve1.c
@@ -6198,6 +6218,14 @@ C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/hidmanager/hidinputevent.h
 memory
 -
 
+C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/myGERBSsurface6.h
+../gmlib/modules/scene/src/selector/gmselector.h
+C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/scene/src/selector/gmselector.h
+simplesubsurf.h
+C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/simplesubsurf.h
+MyGERBSsurface6.c
+C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/MyGERBSsurface6.c
+
 C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/scenario.cpp
 scenario.h
 C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/scenario.h
@@ -6217,8 +6245,12 @@ CurveBlend2.h
 C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/CurveBlend2.h
 GERBS.h
 C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/GERBS.h
+GERBSurface.h
+C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/GERBSurface.h
 math.h
 C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/math.h
+myGERBSsurface6.h
+C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/myGERBSsurface6.h
 gmOpenglModule
 -
 gmSceneModule
@@ -6232,6 +6264,12 @@ C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/scenario.h
 application/gmlibwrapper.h
 C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/application/gmlibwrapper.h
 QObject
+-
+
+C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/simplesubsurf.h
+gmCoreModule
+-
+gmParametricsModule
 -
 
 C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/testtorus.h

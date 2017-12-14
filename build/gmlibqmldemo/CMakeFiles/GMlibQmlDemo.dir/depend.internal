@@ -5532,19 +5532,50 @@ CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj
  C:/Qt/Qt5.7.0/5.7/mingw53_32/include/QtQuick/qquickitem.h
  C:/Qt/Qt5.7.0/5.7/mingw53_32/include/QtQuick/qtquickglobal.h
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/containers/gmarray.h
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/containers/gmarraylx.h
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/containers/gmarrayt.h
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/containers/gmdmatrix.h
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/containers/gmdvector.h
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/containers/gmdvectorn.h
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmangle
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmarray
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmarraylx
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmarrayt
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmcolor
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmdivideddifferences
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmdmatrix
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmdvector
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmdvectorn
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmglobal
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmglobal.h
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmmatrix
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmpoint
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmrandom
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmsimplex
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmsortobject
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmstaticproc
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmstaticproc2
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmstream
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmstring
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmsubspace
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmtimer
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/gmutils
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/static/gmstaticproc.h
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/static/gmstaticproc2.h
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/types/gmangle.h
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/types/gmmatrix.h
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/types/gmpoint.h
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/types/gmsimplex.h
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/types/gmsubspace.h
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/utils/gmcolor.h
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/utils/gmdivideddifferences.h
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/utils/gmrandom.h
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/utils/gmsortobject.h
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/utils/gmstream.h
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/utils/gmstring.h
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/utils/gmtimer.h
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/core/utils/gmutils.h
+ C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/gmCoreModule
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/gmOpenglModule
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/gmParametricsModule
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/gmSceneModule
@@ -5827,12 +5858,16 @@ CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj
  C:/Users/Admin/Desktop/AppGeoMod/build/gmlibrelwithdebinfo/include/scene/visualizers/gmsurroundingspherevisualizer.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/containers/gmarray.c
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/containers/gmarray.h
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/containers/gmarraylx.c
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/containers/gmarraylx.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/containers/gmarrayt.c
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/containers/gmarrayt.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/containers/gmdmatrix.c
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/containers/gmdmatrix.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/containers/gmdvector.c
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/containers/gmdvector.h
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/containers/gmdvectorn.c
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/containers/gmdvectorn.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/gmglobal.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/static/gmstaticproc.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/static/gmstaticproc2.c
@@ -5842,9 +5877,15 @@ CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/types/gmmatrix.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/types/gmpoint.c
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/types/gmpoint.h
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/types/gmsimplex.c
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/types/gmsimplex.h
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/types/gmsubspace.c
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/types/gmsubspace.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/utils/gmcolor.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/utils/gmdivideddifferences.c
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/utils/gmdivideddifferences.h
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/utils/gmrandom.c
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/utils/gmrandom.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/utils/gmsortobject.c
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/utils/gmsortobject.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib/modules/core/src/utils/gmstream.h
@@ -6081,6 +6122,9 @@ CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj
  C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/CurveBlend2.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/GERBS.c
  C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/GERBS.h
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/GERBSURFACE.c
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/GERBSurface.h
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/MyGERBSsurface6.c
  C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/P3DCurve.c
  C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/P3DCurve1.c
  C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/P3DCurve2.c
@@ -6093,6 +6137,8 @@ CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj
  C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/PBspline.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/application/gmlibwrapper.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/exprtk.h
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/myGERBSsurface6.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/scenario.cpp
  C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/scenario.h
+ C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/simplesubsurf.h
  C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/testtorus.h

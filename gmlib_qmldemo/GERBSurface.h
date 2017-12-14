@@ -14,7 +14,7 @@ template <typename T>
 class GERBSURFACE : public GMlib::PSurf<T,3> {
     GM_SCENEOBJECT(GERBSURFACE)
 public:
-    GERBSURFACE( GMlib::PSurf<T, 3>*  c, int n1, int n2 );
+    GERBSURFACE( GMlib::PSurf<T, 3>*  s, int n1, int n2 );
 
     GERBSURFACE( const GERBSURFACE<T>& copy );
     virtual ~GERBSURFACE();
@@ -28,29 +28,36 @@ public:
     //****************************************
 
     // from PCurve
-    bool                isClosed() const override;
+    bool                isClosedU() const override;
+    bool                isClosedV() const override;
 
 protected:
     // Virtual function from PCurve that has to be implemented locally
-    void                eval(T t, int d, bool l = true ) const override;
-    T                   getStartPu() const override;
-    T                   getEndPu()   const override;
-    T                   getStartPv() const override;
-    T                   getEndPv()   const override;
+    void                eval(T tu, T tv, int d1, int d2, bool l = true, bool k = true ) const override;
+    T                   getStartPU() const override;
+    T                   getEndPU()   const override;
+    T                   getStartPV() const override;
+    T                   getEndPV()   const override;
 
 
     // Protected data for the curve
     // Protected data for the curve
-    GMlib::DVector< GMlib::PSurf<T,3>* >   _ls; // local surfaces
+    GMlib::DMatrix< GMlib::PSurf<T,3>* >   _ls; // local surfaces
 
-    int                                     _n;
-    GMlib::DVector<T>                       _t; // knot vector
+    int                                     _n1,_n2;
+    GMlib::DVector<T>                       _u; // knot vector
+    GMlib::DVector<T>                       _v; // knot vector
     T               Bfunc(T t) const;
-    T              _W(int i, int d, T t) const;
+    T               BfuncD(T t) const;
+    T              _W(int i, int d, T t,const GMlib::DVector<T>& k) const;
     void lSq( const GMlib::DMatrix<T>& mat, const GMlib::DVector<GMlib::Vector<T,3>>& P);
-    int            findIndex( T t) const;
-    void           generateKnotVector(int n, T s, T e);
-    bool           _closed;
+    int            findIndex( T t,const GMlib::DVector<T>& k) const;
+    void           generateKnotVector(GMlib::DVector<T> &_t,int n, T s, T e, bool closed);
+    void           randomizeHeight(float n);
+    float          generateRandomValue(float a, float b);
+    bool           _closed_u;
+    bool           _closed_v;
+    void           localSimulate(double dt) override;
 
 }; // END class GERBSURFACE
 

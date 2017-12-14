@@ -12,6 +12,8 @@ namespace GMlib {
 
 template <typename T, int n>
 class PCurve;
+template <typename T, int n>
+class PSurf;
 
 
 }
@@ -33,6 +35,8 @@ private:
   GMlib::PCurve<float, 3>* CurveBlend{nullptr};
   GMlib::PCurve<float, 3>* MyBlendCurve{nullptr};
   GMlib::PSurf<float, 3>* MySurface{nullptr};
+  GMlib::PSurf<float, 3>* MyERBSurface{nullptr};
+  GMlib::PSurf<float, 3>* MyERBSurface1{nullptr};
 
 
 public slots:

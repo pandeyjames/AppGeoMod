@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{wesley:2013}
+Addision Wesley.
+\newblock {\em A Tour of C++}.
+\newblock PEARSON, 1st edition, 2013.
+
+\bibitem{guide:2016}
+Witold Wysota and Lorenz Haas.
+\newblock {\em Game Programming Using Qt Beginner's Guide}.
+\newblock PACKT Publishing, 1st edition, 2016.
+
+\end{thebibliography}

@@ -196,9 +196,18 @@ T GERBS<T>::Bfunc(T t) const{
 template <typename T>
 void GERBS<T>::localSimulate(double dt)
 {
-    for (int i=0;i<_n;i++){
-    _lc[i]->rotate(dt, GMlib::Vector<float, 3> (1,1,0));
+//    for (int i=0;i<_n;i++){
+//    _lc[i]->rotate(dt, GMlib::Vector<float, 3> (1,1,0));
+//    }
+
+
+       for(int i=0;i<_lc.getDim();i++){
+           _lc[i]->rotate(1 , GMlib::Vector<float,3>( 0.0f, 0.0f, 0.5f*dt) );
+           _lc[i]->rotate(dt , GMlib::Vector<float,3>( 1.0f, 0.0f, 0.0f) );
+           _lc[i]->rotate(dt , GMlib::Vector<float,3>( 0.0f, 1.0f, 0.0f) );
+           _lc[i]->rotate(dt , GMlib::Vector<float,3>( 0.0f, 0.0f, 1.0f) );
+
+    }
     }
     //std::cout<<dt;
-}
 //} // END namespace GMlib

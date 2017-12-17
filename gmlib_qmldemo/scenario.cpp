@@ -10,7 +10,6 @@
 #include "GERBS.h"
 #include "GERBSurface.h"
 #include "math.h"
-#include "myGERBSsurface6.h"
 
 //// hidmanager
 //#include "hidmanager/defaulthidmanager.h"
@@ -235,10 +234,10 @@ void Scenario::initializeScenario() {
     MyERBSurface->translateGlobal(GMlib::Vector<float,3> (10.0f,0.0f,10.0f));
     scene()->insert(MyERBSurface);
 
-    //auto MyTorus = new GMlib::PTorus<float>(5,2);
-    //auto MySphere = new GMlib::PSphere<float>(5);
+//    auto MyTorus = new GMlib::PTorus<float>(5,2);
+//    auto MySphere = new GMlib::PSphere<float>(5);
     auto MyCylinder = new GMlib::PCylinder<float>(2,5);
-    //auto MySeaSell = new GMlib::PSeashell
+//    auto MySeaSell = new GMlib::PSeashell
 
     MyERBSurface1 = new GERBSURFACE<float>(MyCylinder,4,5);
     MyERBSurface1->toggleDefaultVisualizer();
@@ -247,6 +246,14 @@ void Scenario::initializeScenario() {
     MyERBSurface1->translateGlobal(GMlib::Vector<float,3> (5.0f,0.0f,-10.0f));
     scene()->insert(MyERBSurface1);
 
+
+
+//    MyERBSurface1 = new GMlib::MyGERBSSurface<float>(MySurface,4,5);
+//    MyERBSurface1->toggleDefaultVisualizer();
+//    MyERBSurface1->replot(50,50,1,1);
+//    MyERBSurface1->setColor(GMlib::GMcolor::brown());
+//    MyERBSurface1->translateGlobal(GMlib::Vector<float,3> (5.0f,0.0f,-10.0f));
+//    scene()->insert(MyERBSurface1);
 
 
 

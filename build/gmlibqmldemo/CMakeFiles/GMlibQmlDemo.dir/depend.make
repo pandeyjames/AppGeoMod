@@ -6123,7 +6123,6 @@ CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/g
 CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/GERBS.h
 CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/GERBSURFACE.c
 CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/GERBSurface.h
-CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/MyGERBSsurface6.c
 CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/P3DCurve.c
 CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/P3DCurve1.c
 CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/P3DCurve2.c
@@ -6136,7 +6135,6 @@ CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/g
 CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/PBspline.h
 CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/application/gmlibwrapper.h
 CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/exprtk.h
-CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/myGERBSsurface6.h
 CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/scenario.cpp
 CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/scenario.h
 CMakeFiles/GMlibQmlDemo.dir/scenario.cpp.obj: C:/Users/Admin/Desktop/AppGeoMod/gmlib_qmldemo/simplesubsurf.h

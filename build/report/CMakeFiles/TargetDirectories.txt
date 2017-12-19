@@ -1,0 +1,3 @@
+C:/Users/Admin/Desktop/AppGeoMod/build/report/CMakeFiles/report.dir
+C:/Users/Admin/Desktop/AppGeoMod/build/report/CMakeFiles/edit_cache.dir
+C:/Users/Admin/Desktop/AppGeoMod/build/report/CMakeFiles/rebuild_cache.dir

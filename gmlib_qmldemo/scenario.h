@@ -37,6 +37,8 @@ private:
   GMlib::PSurf<float, 3>* MySurface{nullptr};
   GMlib::PSurf<float, 3>* MyERBSurface{nullptr};
   GMlib::PSurf<float, 3>* MyERBSurface1{nullptr};
+  GMlib::PSurf<float, 3>* MyERBSurface2{nullptr};
+  GMlib::PSurf<float, 3>* MyERBSurface3{nullptr};
 
 
 public slots:

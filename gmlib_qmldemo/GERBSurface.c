@@ -262,41 +262,18 @@ void GERBSURFACE<T>::localSimulate(double dt)
     double random = (double)std::rand() / (double) RAND_MAX;
     double diffrence = b-a;
     double r = random*diffrence;
-    std::cout<<"random value-> "<<a+r<<std::endl;
+    //std::cout<<"random value-> "<<a+r<<std::endl;
     //val= (a+r)*0.1;
 //    this->updateHeight(std::sin(_dt));
 //    _force +=dt;
     for (int i=0;i<_n1;i++){
         for(int j=0; j<_n2;j++){
             //_ls[i][j]->translate(GMlib::Vector<float, 3>(dt,0,0));
-    _ls[i][j]->rotate(std::sin(dt),GMlib::Vector<float, 3>(1,0,0));
+    _ls[i][j]->rotate(std::sin(dt+r),GMlib::Vector<float, 3>(1,0,0));
         }
     }
     //randomizeHeight(val);
 
 }
 //} // END namespace GMlib
-template <typename T>
-void GERBSURFACE<T>::randomizeHeight(float n)
-{
-    for (int i=0;i<_n1;i++){
-        for(int j=0; j<_n2;j++){
-            //_ls[i][j]->translate(GMlib::Vector<float, 3>(dt,0,0));
-    _ls[i][j]->translate(GMlib::Vector<float, 3>(n,0,0));
-    _ls[i][j]->translate(GMlib::Vector<float, 3>(0,n,0));
-        }
-    }
-}
-template <typename T>
-float GERBSURFACE<T>::generateRandomValue(float a, float b)
-{
-//    //std::srand(time(NULL));
-//    double random = (double)std::rand() / (double) RAND_MAX;
-//    double diffrence = b-a;
-//    double r = random*diffrence;
-//    std::cout<<"random value-> "<<a+r<<std::endl;
-//    return (a+r)*0.5;
-    return 0;
-
-}
 

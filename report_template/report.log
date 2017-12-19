@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.10.24)  14 DEC 2017 17:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2016.10.24)  17 DEC 2017 23:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -644,40 +644,21 @@ File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
 LaTeX Warning: Unused global option(s):
     [a4].
 
-(./report.aux
-
-LaTeX Warning: Label `fig:manipulate' multiply defined.
-
-
-LaTeX Warning: Label `fig:manipulate@cref' multiply defined.
-
-
-LaTeX Warning: Label `fig:rotateobject' multiply defined.
-
-
-LaTeX Warning: Label `fig:rotateobject@cref' multiply defined.
-
-
-LaTeX Warning: Label `fig:rotateobject' multiply defined.
-
-
-LaTeX Warning: Label `fig:rotateobject@cref' multiply defined.
-
-)
+(./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
  ABD: EveryShipout initializing macros
 (c:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -745,156 +726,116 @@ e
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.14} into 
 your preamble.
- on input line 35.
+ on input line 32.
 
 [1
 
 {c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<gfx/first_demo.png, id=17, 609.02531pt x 569.12625pt>
-File: gfx/first_demo.png Graphic file (type png)
+<gfx/ModelCurve.PNG, id=16, 572.1375pt x 431.36156pt>
+File: gfx/ModelCurve.PNG Graphic file (type png)
+ <use gfx/ModelCurve.PNG>
+Package pdftex.def Info: gfx/ModelCurve.PNG used on input line 93.
+(pdftex.def)             Requested size: 224.2479pt x 169.07283pt.
 
-<use gfx/first_demo.png>
-Package pdftex.def Info: gfx/first_demo.png used on input line 76.
-(pdftex.def)             Requested size: 276.00105pt x 257.92812pt.
- [2 <./gfx/first_demo.png>] [3]
-<gfx/flowchart.png, id=26, 579.16376pt x 498.86375pt>
-File: gfx/flowchart.png Graphic file (type png)
- <use gfx/flowchart.png>
-Package pdftex.def Info: gfx/flowchart.png used on input line 93.
-(pdftex.def)             Requested size: 310.4979pt x 267.44896pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 110.
+<gfx/Model.PNG, id=18, 603.75563pt x 477.28313pt>
+File: gfx/Model.PNG Graphic file (type png)
+ <use gfx/Model.PNG>
+Package pdftex.def Info: gfx/Model.PNG used on input line 99.
+(pdftex.def)             Requested size: 224.2479pt x 177.26927pt.
+ [2 <./gfx/ModelCurve.PNG>] <gfx/bspline.png, id=24, 605.26125pt x 476.53032pt>
+File: gfx/bspline.png Graphic file (type png)
 
+<use gfx/bspline.png>
+Package pdftex.def Info: gfx/bspline.png used on input line 116.
+(pdftex.def)             Requested size: 155.24895pt x 122.22984pt.
 
-(c:/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 110.
- [4 <./gfx/flowchart.png>] <gfx/manipulate.png, id=31, 608.2725pt x 564.60938pt
->
-File: gfx/manipulate.png Graphic file (type png)
+<gfx/bsplinemodified.png, id=25, 600.74437pt x 472.76625pt>
+File: gfx/bsplinemodified.png Graphic file (type png)
 
-<use gfx/manipulate.png>
-Package pdftex.def Info: gfx/manipulate.png used on input line 125.
-(pdftex.def)             Requested size: 224.2479pt x 208.15266pt.
+<use gfx/bsplinemodified.png>
+Package pdftex.def Info: gfx/bsplinemodified.png used on input line 117.
+(pdftex.def)             Requested size: 155.24895pt x 122.1733pt.
+ [3 <./gfx/Model.PNG> <./gfx/bspline.png> <./gfx/bsplinemodified.png>]
+<gfx/blendingcurves.png, id=32, 604.50844pt x 476.53032pt>
+File: gfx/blendingcurves.png Graphic file (type png)
 
+<use gfx/blendingcurves.png>
+Package pdftex.def Info: gfx/blendingcurves.png used on input line 129.
+(pdftex.def)             Requested size: 241.49895pt x 190.36879pt.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 129.
+<gfx/gerbcurve1.png, id=33, 604.50844pt x 475.02469pt>
+File: gfx/gerbcurve1.png Graphic file (type png)
 
-<gfx/zoom.png, id=32, 605.26125pt x 557.08125pt>
-File: gfx/zoom.png Graphic file (type png)
- <use gfx/zoom.png>
-Package pdftex.def Info: gfx/zoom.png used on input line 131.
-(pdftex.def)             Requested size: 155.24895pt x 142.89113pt.
+<use gfx/gerbcurve1.png>
+Package pdftex.def Info: gfx/gerbcurve1.png used on input line 139.
+(pdftex.def)             Requested size: 155.24895pt x 121.99585pt.
+ <gfx/gerbcurve2.png, id=34, 605.26125pt x 475.7775pt>
+File: gfx/gerbcurve2.png Graphic file (type png)
 
-<gfx/zoomout.png, id=33, 605.26125pt x 556.32843pt>
-File: gfx/zoomout.png Graphic file (type png)
- <use gfx/zoomout.png>
-Package pdftex.def Info: gfx/zoomout.png used on input line 132.
-(pdftex.def)             Requested size: 155.24895pt x 142.69803pt.
+<use gfx/gerbcurve2.png>
+Package pdftex.def Info: gfx/gerbcurve2.png used on input line 140.
+(pdftex.def)             Requested size: 155.24895pt x 122.03673pt.
 
-<gfx/insertsphere.png, id=34, 603.75563pt x 565.36218pt>
-File: gfx/insertsphere.png Graphic file (type png)
+<gfx/gerbcurve3.png, id=35, 600.74437pt x 474.27188pt>
+File: gfx/gerbcurve3.png Graphic file (type png)
 
-<use gfx/insertsphere.png>
-Package pdftex.def Info: gfx/insertsphere.png used on input line 136.
-(pdftex.def)             Requested size: 155.24895pt x 145.3775pt.
+<use gfx/gerbcurve3.png>
+Package pdftex.def Info: gfx/gerbcurve3.png used on input line 141.
+(pdftex.def)             Requested size: 155.24895pt x 122.56238pt.
+ <gfx/gerbcurve4.png, id=36, 604.50844pt x 475.7775pt>
+File: gfx/gerbcurve4.png Graphic file (type png)
 
-<gfx/clearscreen.png, id=35, 607.51968pt x 557.83406pt>
-File: gfx/clearscreen.png Graphic file (type png)
+<use gfx/gerbcurve4.png>
+Package pdftex.def Info: gfx/gerbcurve4.png used on input line 142.
+(pdftex.def)             Requested size: 155.24895pt x 122.1892pt.
+ [4 <./gfx/blendingcurves.png>]
+<gfx/Plane1.png, id=41, 604.50844pt x 474.27188pt>
+File: gfx/Plane1.png Graphic file (type png)
+ <use gfx/Plane1.png>
+Package pdftex.def Info: gfx/Plane1.png used on input line 156.
+(pdftex.def)             Requested size: 155.24895pt x 121.80252pt.
 
-<use gfx/clearscreen.png>
-Package pdftex.def Info: gfx/clearscreen.png used on input line 137.
-(pdftex.def)             Requested size: 155.24895pt x 142.54797pt.
+<gfx/Plane2.png, id=42, 602.25pt x 470.50781pt>
+File: gfx/Plane2.png Graphic file (type png)
+ <use gfx/Plane2.png>
+Package pdftex.def Info: gfx/Plane2.png used on input line 157.
+(pdftex.def)             Requested size: 155.24895pt x 121.28813pt.
 
+<gfx/sph1.png, id=43, 602.25pt x 473.51906pt>
+File: gfx/sph1.png Graphic file (type png)
+ <use gfx/sph1.png>
+Package pdftex.def Info: gfx/sph1.png used on input line 163.
+(pdftex.def)             Requested size: 155.24895pt x 122.06438pt.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 140.
-
-<gfx/rotate1.png, id=36, 607.51968pt x 566.115pt>
-File: gfx/rotate1.png Graphic file (type png)
- <use gfx/rotate1.png>
-Package pdftex.def Info: gfx/rotate1.png used on input line 142.
-(pdftex.def)             Requested size: 155.24895pt x 144.66406pt.
-
-<gfx/rotate2.png, id=37, 606.01407pt x 569.12625pt>
-File: gfx/rotate2.png Graphic file (type png)
- <use gfx/rotate2.png>
-Package pdftex.def Info: gfx/rotate2.png used on input line 143.
-(pdftex.def)             Requested size: 155.24895pt x 145.7983pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 146.
-
-<gfx/movecamera.png, id=38, 580.41844pt x 305.64188pt>
-File: gfx/movecamera.png Graphic file (type png)
-
-<use gfx/movecamera.png>
-Package pdftex.def Info: gfx/movecamera.png used on input line 148.
-(pdftex.def)             Requested size: 345.0pt x 181.67494pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 152.
-
-<gfx/rotateobject.png, id=39, 481.04718pt x 273.27094pt>
-File: gfx/rotateobject.png Graphic file (type png)
-
-<use gfx/rotateobject.png>
-Package pdftex.def Info: gfx/rotateobject.png used on input line 154.
-(pdftex.def)             Requested size: 345.0pt x 195.99184pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 158.
-
-<gfx/select.png, id=40, 464.4853pt x 334.24875pt>
-File: gfx/select.png Graphic file (type png)
- <use gfx/select.png>
-Package pdftex.def Info: gfx/select.png used on input line 160.
-(pdftex.def)             Requested size: 345.0pt x 248.27353pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 164.
-
-<gfx/deleteobject.png, id=41, 486.31688pt x 252.19218pt>
-File: gfx/deleteobject.png Graphic file (type png)
-
-<use gfx/deleteobject.png>
-Package pdftex.def Info: gfx/deleteobject.png used on input line 166.
-(pdftex.def)             Requested size: 345.0pt x 178.90761pt.
- [5 <./gfx/manipulate.png>] [6 <./gfx/zoom.png> <./gfx/zoomout.png> <./gfx/inse
-rtsphere.png> <./gfx/clearscreen.png> <./gfx/rotate1.png> <./gfx/rotate2.png>] 
-[7 <./gfx/movecamera.png> <./gfx/rotateobject.png>]
-[8 <./gfx/select.png> <./gfx/deleteobject.png>] (./report.bbl) [9]
-(./report.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+<gfx/sph2.png, id=44, 603.75563pt x 470.50781pt>
+File: gfx/sph2.png Graphic file (type png)
+ <use gfx/sph2.png>
+Package pdftex.def Info: gfx/sph2.png used on input line 164.
+(pdftex.def)             Requested size: 155.24895pt x 120.9866pt.
+ [5 <./gfx/gerbcurve1.png> <./gfx/gerbcurve2.png> <./gfx/gerbcurve3.png> <./gfx
+/gerbcurve4.png>] [6 <./gfx/Plane1.png> <./gfx/Plane2.png> <./gfx/sph1.png> <./
+gfx/sph2.png>] (./report.bbl) [7] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 26580 strings out of 494289
- 685715 string characters out of 6167825
- 894750 words of memory out of 5000000
- 29440 multiletter control sequences out of 15000+600000
+ 26573 strings out of 494289
+ 685497 string characters out of 6167825
+ 895750 words of memory out of 5000000
+ 29434 multiletter control sequences out of 15000+600000
  9529 words of font info for 35 fonts, out of 8000000 for 9000
  476 hyphenation exceptions out of 8191
- 62i,6n,96p,704b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2016/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2016/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr9.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
-fb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on report.pdf (9 pages, 565909 bytes).
+ 62i,7n,96p,704b,609s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2016/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2016/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pf
+b><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2016/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2016/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (7 pages, 353648 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  78 words of extra memory for PDF output out of 10000 (max. 10000000)
 

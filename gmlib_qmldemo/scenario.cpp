@@ -116,16 +116,7 @@ void Scenario::initializeScenario() {
 
 
 
-    auto testcurv = new P3DCurve<float>();
-    testcurv->toggleDefaultVisualizer();
-    testcurv->replot(100,0);
-    testcurv->setColor(GMlib::GMcolor::black());
-    this->scene()->insert(testcurv);
 
-    GMlib::DVector<GMlib::Vector<float,3>> c(10);
-    for (int i=0; i<10; i++){
-        c[i]=testcurv->getPosition(testcurv->getParStart()+i*testcurv->getParDelta()/9);
-    }
 
 //    auto testcurv1 = new P3DCurve1<float>();
 //    testcurv1->toggleDefaultVisualizer();
@@ -157,6 +148,22 @@ void Scenario::initializeScenario() {
 //    this->scene()->insert(testbsp);
 
 
+
+
+    //Model Curve
+    auto testcurv = new P3DCurve<float>();
+    testcurv->toggleDefaultVisualizer();
+    testcurv->replot(100,0);
+    testcurv->setColor(GMlib::GMcolor::black());
+    testcurv->translate(GMlib::Vector<float, 3>(10,10,1));
+    this->scene()->insert(testcurv);
+
+    GMlib::DVector<GMlib::Vector<float,3>> c(10);
+    for (int i=0; i<10; i++){
+        c[i]=testcurv->getPosition(testcurv->getParStart()+i*testcurv->getParDelta()/9);
+    }
+
+    //Spline curve
     mySplineCurve = new PBspline<float>(c,2);
     mySplineCurve->toggleDefaultVisualizer();
     mySplineCurve->replot(100,0);
@@ -172,6 +179,7 @@ void Scenario::initializeScenario() {
     scene()->insert(mySplineCurve1);
 
 
+    //Task 3
     Curve1 = new P3DCurve<float>();//(mySplineCurve,10);
     Curve1->toggleDefaultVisualizer();
     Curve1->replot(50,0);
@@ -184,7 +192,6 @@ void Scenario::initializeScenario() {
     Curve2->toggleDefaultVisualizer();
     Curve2->replot(50,0);
     Curve2->setColor(GMlib::GMcolor::green());
-
     Curve2->translateGlobal(GMlib::Vector<float, 3>(-15,0,0));
     Curve2->rotate(90,GMlib::Vector<float, 3>(1,0,0));
     scene()->insert(Curve2);
@@ -207,6 +214,7 @@ void Scenario::initializeScenario() {
         d[i]=testcurv2->getPosition(testcurv2->getParStart()+i*testcurv2->getParDelta()/9);
     }
 
+    //Task 4
     MyBlendCurve = new GERBS<float>(testcurv2,8);
     MyBlendCurve->toggleDefaultVisualizer();
     MyBlendCurve->replot(100,0);
@@ -214,12 +222,13 @@ void Scenario::initializeScenario() {
     MyBlendCurve->translateGlobal(GMlib::Vector<float,3> (10.0f,0.0f,10.0f));
     scene()->insert(MyBlendCurve);
 
+
+    //Task 5 Open
     MySurface = new GMlib::PPlane<float>(
                 GMlib::Point<float, 3> (0.0f,0.0f,0.f),
                 GMlib::Vector<float, 3>(14.0f,5.0f,0.f),
                 GMlib::Vector<float, 3>(0.0f,-7.0f,0.0f));
     auto normalVis = new GMlib::PSurfNormalsVisualizer<float,3>();
-    MySurface->toggleDefaultVisualizer();
     MySurface->toggleDefaultVisualizer();
     MySurface->insertVisualizer(normalVis);
     MySurface->replot(100,100,1,1);
@@ -234,26 +243,40 @@ void Scenario::initializeScenario() {
     MyERBSurface->translateGlobal(GMlib::Vector<float,3> (10.0f,0.0f,10.0f));
     scene()->insert(MyERBSurface);
 
-//    auto MyTorus = new GMlib::PTorus<float>(5,2);
+    //Closed
+
+    auto MyTorus = new GMlib::PTorus<float>(5,2);
 //    auto MySphere = new GMlib::PSphere<float>(5);
+    auto apple      = new GMlib::PSphere<float>(10);
     auto MyCylinder = new GMlib::PCylinder<float>(2,5);
-//    auto MySeaSell = new GMlib::PSeashell
+
+    MyERBSurface2 = new GERBSURFACE<float>(MyTorus,4,5);
+    auto normalVis2 = new GMlib::PSurfNormalsVisualizer<float,3>();
+    MyERBSurface2->toggleDefaultVisualizer();
+    MyERBSurface2->insertVisualizer(normalVis2);
+    MyERBSurface2->replot(50,50,1,1);
+    MyERBSurface2->setMaterial(GMlib::GMmaterial::chrome());
+    MyERBSurface2->translateGlobal(GMlib::Vector<float,3> (5.0f,0.0f,10.0f));
+    scene()->insert(MyERBSurface2);
+
 
     MyERBSurface1 = new GERBSURFACE<float>(MyCylinder,4,5);
+    auto normalVis1 = new GMlib::PSurfNormalsVisualizer<float,3>();
     MyERBSurface1->toggleDefaultVisualizer();
+    MyERBSurface1->insertVisualizer(normalVis1);
     MyERBSurface1->replot(50,50,1,1);
-    MyERBSurface1->setColor(GMlib::GMcolor::brown());
+    MyERBSurface1->setMaterial(GMlib::GMmaterial::emerald());
     MyERBSurface1->translateGlobal(GMlib::Vector<float,3> (5.0f,0.0f,-10.0f));
     scene()->insert(MyERBSurface1);
 
 
 
-//    MyERBSurface1 = new GMlib::MyGERBSSurface<float>(MySurface,4,5);
-//    MyERBSurface1->toggleDefaultVisualizer();
-//    MyERBSurface1->replot(50,50,1,1);
-//    MyERBSurface1->setColor(GMlib::GMcolor::brown());
-//    MyERBSurface1->translateGlobal(GMlib::Vector<float,3> (5.0f,0.0f,-10.0f));
-//    scene()->insert(MyERBSurface1);
+    MyERBSurface3 = new GERBSURFACE<float>(apple,4,5);
+    MyERBSurface3->toggleDefaultVisualizer();
+    MyERBSurface3->replot(50,50,1,1);
+    MyERBSurface3->setMaterial(GMlib::GMmaterial::gold());
+    MyERBSurface3->translateGlobal(GMlib::Vector<float,3> (5.0f,0.0f,-10.0f));
+    scene()->insert(MyERBSurface3);
 
 
 
@@ -307,6 +330,11 @@ void Scenario::simReplot()
  if (MyERBSurface)
      MyERBSurface->replot(10,10,1,1);
  if (MyERBSurface1){
+     MyERBSurface1->replot(100,100,1,1);
+ }
+ if (MyERBSurface2)
+     MyERBSurface->replot(10,10,1,1);
+ if (MyERBSurface3){
      MyERBSurface1->replot(100,100,1,1);
  }
 }

@@ -53,8 +53,6 @@ protected:
     void lSq( const GMlib::DMatrix<T>& mat, const GMlib::DVector<GMlib::Vector<T,3>>& P);
     int            findIndex( T t,const GMlib::DVector<T>& k) const;
     void           generateKnotVector(GMlib::DVector<T> &_t,int n, T s, T e, bool closed);
-    void           randomizeHeight(float n);
-    float          generateRandomValue(float a, float b);
     bool           _closed_u;
     bool           _closed_v;
     void           localSimulate(double dt) override;

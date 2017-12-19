@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="report"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\dat\;CMake Files\gfx\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/Admin/Desktop/AppGeoMod/build/report"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="report">
+				<Option working_dir="C:/Users/Admin/Desktop/AppGeoMod/build/report"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 report"/>
+					<CompileFile command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/Admin/Desktop/AppGeoMod/build/report"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/Admin/Desktop/AppGeoMod/build/report"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/Qt/Qt5.7.0/Tools/mingw530_32/bin/mingw32-make.exe -f &quot;C:/Users/Admin/Desktop/AppGeoMod/build/report/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/report.tex">
+			<Option target="report"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/bibliography.bib">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/dat/benchmark_vector_reserve.dat">
+			<Option virtualFolder="CMake Files\dat\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/dat/benchmark_vector_stl.dat">
+			<Option virtualFolder="CMake Files\dat\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/dat/benchmark_stl_sort.dat">
+			<Option virtualFolder="CMake Files\dat\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/dat/benchmark_mylib_bubble.dat">
+			<Option virtualFolder="CMake Files\dat\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/dat/benchmark_mylib_shell.dat">
+			<Option virtualFolder="CMake Files\dat\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/lena.png">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/first_demo.png">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/manipulate.PNG">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/zoom.PNG">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/clearscreen.PNG">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/Insertsphere.PNG">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/zoomout.PNG">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/rotateobject.PNG">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/movecamera.PNG">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/rotate1.PNG">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/rotate2.PNG">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/flowchart.png">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/select.PNG">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/deleteobject.PNG">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/modelcurve.PNG">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+		<Unit filename="C:/Users/Admin/Desktop/AppGeoMod/report_template/gfx/model.PNG">
+			<Option virtualFolder="CMake Files\gfx\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -41,6 +41,8 @@ set( SRCS
   gfx/flowchart.png
   gfx/select.png
   gfx/deleteobject.png
+  gfx/modelcurve.png
+  gfx/model.png
 
 )
  

@@ -1,5 +1,16 @@
 \begin{thebibliography}{1}
 
+\bibitem{ModelCurve}
+Motion in 3d.
+\newblock http://www.math.uri.edu/~bkaskosz/flashmo/as3/motion3d/
+motion3d.html.
+\newblock Accessed: 2017-11-14.
+
+\bibitem{BlendBook:2012}
+Arne Laks\aa.
+\newblock {\em Blending technics for Curves and Surface constructions}.
+\newblock 2012.
+
 \bibitem{wesley:2013}
 Addision Wesley.
 \newblock {\em A Tour of C++}.
